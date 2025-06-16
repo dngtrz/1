@@ -1,0 +1,14 @@
+
+services:
+  - type: web
+    name: discord-ai-bot
+    env: node
+    buildCommand: npm install && npm run build
+    startCommand: npm run start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: DISCORD_TOKEN
+        sync: false
+      - key: OPENAI_API_KEY
+        sync: false
